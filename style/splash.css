@@ -3,6 +3,7 @@ body{
     margin: 0;
     height: 100vh;
     width: 100%;
+    font-family: 'montserrat', 'sans-serif';
 }
 .tela{
     width: 400px;
@@ -10,9 +11,52 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: bisque;
+    background-color:white;
     padding: 20px;
+    box-shadow: 0 0 2px;
 }
 .tela h1{
     text-align: center;
+    border-bottom: 1px solid silver;
+    padding: 0 0 20px 0;
+}
+.tela h4{
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+.descrision{
+    position: relative;
+    
+}
+.descrision p{
+    text-align: center ;
+
+}
+.descrision li{
+    position: relative;
+    height: 20px;
+    border: 1px solid silver;
+    margin: 0 0 15px 0;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+.div-bt{
+    width: 100%;
+}
+.div-bt button{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px 0.5px #00000046;
+    transition: .5s;
+}
+.div-bt button:hover{
+    background: silver;
 }

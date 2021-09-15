@@ -4,6 +4,7 @@ body{
     height: 100vh;
     width: 100%;
     background: chocolate;
+    font-family: 'montserrat',sans-serif;
 }
 .tela{
     position: absolute;

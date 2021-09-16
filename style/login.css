@@ -64,6 +64,7 @@ font-size: 18px;
     position: absolute;
     background: rgb(48, 177, 252);
     width: 0%;
+    transition: .5s;
 }
 .div-input input:focus~span::before,
 .div-input input:valid~span::before{
@@ -87,4 +88,17 @@ button{
     color: white;
     background: rgb(6, 164, 212);
 
+}
+#cadastrar{
+    position: relative;
+    color: white;
+    left: 10px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+#cadastrar a{
+    color: rgb(1, 196, 255);
+    font-weight: 600;
+    text-decoration: none;
+    pointer-events: painted;
 }

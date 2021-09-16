@@ -65,3 +65,17 @@ body{
     background: silver;
     color: #000;
 }
+ #sobre{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 14%;
+    left: 70%;
+    box-shadow: 0 0 4px;
+    background-color: aqua;
+}
+#sobre:hover{
+    background-color: rgb(4, 231, 231);
+}

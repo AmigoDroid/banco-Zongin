@@ -50,11 +50,13 @@ pointer-events: none;
 left: 5px;
 color: silver;
 transition: .2s;
+font-size: 16px;
 }
 .div-input input:focus~label,
 .div-input input:valid~label{
     top: -5px;
     color: rgb(48, 177, 252);
+    font-size: 12px;
 }
 .div-input span::before{
     content: '';

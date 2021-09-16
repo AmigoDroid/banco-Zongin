@@ -1,3 +1,4 @@
+url_home='home.html'
 var login ={
     usuario:localStorage.getItem('usuario'),
     senha:localStorage.getItem('senha')
@@ -14,6 +15,7 @@ forme.addEventListener('submit',function(e){
         console.log('preencha os campos');
     }else if(us==login.usuario && pas===login.senha){
         console.log('logado!');
+        location.assign(url_home);
     }else{
         alert('usuario ou senha incorretos!')
     }

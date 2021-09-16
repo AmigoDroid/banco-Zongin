@@ -10,13 +10,15 @@
       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!--css-->
     <link rel="stylesheet" href="/style/cadastrar.css">
+    <!--javascript-->
+    <script src="/javascript/cadastrar.js" defer></script>
     <title>Cadastrar</title>
 </head>
 <body>
     <div class="tela">
         <div><h1>Cadastro</h1></div>
         <div class="div-input">
-            <form>
+            <form id="formulario">
                 <div id="di">
                     <input id="nome" type="text" required>
                     <span></span>
@@ -48,7 +50,7 @@
                 </div>
 
                 <div>
-                    <button>Cadastrar</button>
+                    <button onclick="cadastrar()">Cadastrar</button>
                 </div>
             </form>
 

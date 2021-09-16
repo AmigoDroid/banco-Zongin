@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tela-perfil{
+    width: 300px;
+    position: relative;
+    background-color: rgb(104, 172, 172);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 5px;
+
+}
+.tela-perfil img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 3px;
+}
+#text-user{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;    
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.tela-saldo h1{
+    padding: 0 0 2px 0;
+    margin: 0;
+}
+.tela-perfil button{
+    position: relative;
+    top: 5px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px;
+}

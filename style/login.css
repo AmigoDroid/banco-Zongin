@@ -3,13 +3,15 @@ body{
     padding: 0;
     height: 100vh;
     width: 100%;
-    background: chocolate;
+    background: url('/img/back_ground.jpg') no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
     font-family: 'montserrat',sans-serif;
 }
 .tela{
     position: absolute;
     width: 300px;
-    background-color: rgb(249, 252, 251);
+    background-color: rgba(0, 0, 0, 0.514);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -18,6 +20,7 @@ body{
 }
 .tela h1{
     text-align: center;
+    color: white;
 }
 .tela form{
 padding: 40px 0;
@@ -37,6 +40,7 @@ position: relative;
     background: none;
     outline: none;
     padding-left:5px;
+    color: white;
 }
 .div-input label{
 position: absolute;
@@ -67,6 +71,7 @@ transition: .2s;
    padding: 0 0 40px 0;
    position: relative;
    left: 5px;
+   color: white;
 }
 button{
     width: 100%;
@@ -77,4 +82,7 @@ button{
     outline: none;
     font-size: 20px;
     font-weight: 600;
+    color: white;
+    background: rgb(6, 164, 212);
+
 }

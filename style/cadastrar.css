@@ -5,7 +5,7 @@ body{
     width: 100%;
     font-weight: 600;
     font-family: 'montserrat',sans-serif;
-    background: chocolate;
+    background: linear-gradient(120deg,rgb(8, 108, 133) , rgb(196, 55, 252));
 }
 .tela{
     width: 300px;
@@ -85,4 +85,6 @@ font-size: 13px;
     font-weight: 600;
     text-align: center;
     margin-top: 20px;
+    color: white;
+    background: rgb(6, 164, 212);
 }

@@ -50,7 +50,7 @@ pointer-events: none;
 left: 5px;
 color: silver;
 transition: .2s;
-font-size: 16px;
+font-size: 18px;
 }
 .div-input input:focus~label,
 .div-input input:valid~label{

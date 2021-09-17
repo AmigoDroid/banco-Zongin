@@ -16,6 +16,7 @@ forme.addEventListener('submit',function(e){
     }else if(us==login.usuario && pas===login.senha){
         console.log('logado!');
         location.assign(url_home);
+        localStorage.setItem('logado','true');
     }else{
         alert('usuario ou senha incorretos!')
     }

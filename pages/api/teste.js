@@ -4,4 +4,3 @@ var kst = process.env.TESTEKEY
 response.json({date:time.toDateString()})
 console.log(kst);
 }
-export default teste;

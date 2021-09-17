@@ -21,12 +21,11 @@ if(logado=='true'){
 function mostrar_dados(obj){
     var nome = document.getElementById('nome-id');
     var saldo = document.getElementById('saldo');
-    //
+    //pegar o saldo e transformar em real
     const dados = obj.saldo;
     var dados_saldo=parseFloat(dados);
     var dinheiro = dados_saldo.toLocaleString('pt-br',{style:'currency',currency:'BRL'});
-    //
-
+    //escrever na tela
     saldo.innerText='saldo: '+dinheiro;
     nome.innerText=obj.nome;
 }

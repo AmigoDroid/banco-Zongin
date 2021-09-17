@@ -6,12 +6,14 @@ var user={
     cpf:'',
     usuario:'',
     senha:'',
+    saldo:'0,00',
     cadastrar(){
         localStorage.setItem('nome',user.nome);
         localStorage.setItem('sobrenome',user.sobrenome);
         localStorage.setItem('cpf',user.cpf);
         localStorage.setItem('usuario',user.usuario);
         localStorage.setItem('senha',user.senha);
+        localStorage.setItem('saldo',user.saldo)
     },
     apagar(){
         localStorage.clear();

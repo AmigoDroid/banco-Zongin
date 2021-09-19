@@ -14,6 +14,7 @@ function auteticar(us,pas){
       }else{
         if (i>=users.length-1) {
           console.log('não logado');
+          alert('usuario ou senha incorretos');
           break;
         }
       }

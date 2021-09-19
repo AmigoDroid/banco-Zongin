@@ -24,7 +24,7 @@ var user ={
     nome:'',
     sobrenome:'',
     cpf:'',
-    saldo:5,
+    saldo:0,
     logado:true
 }
 function update(){

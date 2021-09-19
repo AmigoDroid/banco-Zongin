@@ -4,7 +4,7 @@ window.onload=function(){
     
 }
 const server = async() =>{
-    const api = 'https://api-teste-get.herokuapp.com/usuario';
+    const api = 'https://api-teste-get.herokuapp.com/api/usuario';
     const dados = await fetch(api);
     const txt = await dados.json();
     if(txt.hasOwnProperty('erro')){

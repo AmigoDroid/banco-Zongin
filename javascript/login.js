@@ -1,4 +1,5 @@
-url_home='home.html'
+'use strict'
+ var url_home='home.html'
 var login ={
     usuario:localStorage.getItem('usuario'),
     senha:localStorage.getItem('senha')
@@ -9,15 +10,24 @@ forme.addEventListener('submit',function(e){
     e.preventDefault(); 
     let us = document.getElementById('usuario').value;
     let pas = document.getElementById('senha').value;
-    if(login.usuario===null || login.senha===null){
-        alert("você precisa se cadastrar!")
-    }else if(us===''|| pas===''){
-        console.log('preencha os campos');
-    }else if(us==login.usuario && pas===login.senha){
-        console.log('logado!');
-        location.assign(url_home);
-        localStorage.setItem('logado','true');
-    }else{
-        alert('usuario ou senha incorretos!')
-    }
+   if(us===''||pas===''){
+
+   }else{
+       buscar(); 
+   }
 });
+const buscar = async()=>{
+    const api = 'https://api-teste-get.herokuapp.com/usuario';
+      var dados = await fetch(api);
+      var text = await dados.json();
+     //  console.log(nome);
+       if(text.hasOwnProperty('erro')){
+           alert('erro!')
+       }else{
+           gd(text);
+       }
+   }
+   const gd = (text)=>{
+console.log(text.Nome);
+console.log(text.Idade);
+}

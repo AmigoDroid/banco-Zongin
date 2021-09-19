@@ -1,17 +1,35 @@
 window.onload=function(){
     update();
+    server();
+    
+}
+const server = async() =>{
+    const api = 'https://api-teste-get.herokuapp.com/usuario';
+    const dados = await fetch(api);
+    const txt = await dados.json();
+    if(txt.hasOwnProperty('erro')){
+        //erro
+    }else{
+        upuser(txt);
+    }
+}
+const upuser=(text)=>{
+user.nome=text.Nome;
+user.sobrenome=text.SobreNome;
+user.saldo=text.Saldo;
+update();
 }
 //
 var user ={
-    nome:localStorage.getItem('nome'),
-    sobrenome:localStorage.getItem('sobrenome'),
-    cpf:localStorage.getItem('cpf'),
-    saldo:localStorage.getItem('saldo')
+    nome:'',
+    sobrenome:'',
+    cpf:'',
+    saldo:5,
+    logado:true
 }
-
 function update(){
 var logado = localStorage.getItem('logado')
-if(logado=='true'){
+if(user.logado){
     mostrar_dados(user);
 }else{
     console.log(false);

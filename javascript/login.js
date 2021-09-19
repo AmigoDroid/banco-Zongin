@@ -13,21 +13,6 @@ forme.addEventListener('submit',function(e){
    if(us===''||pas===''){
 
    }else{
-       buscar(); 
+      auteticar(us,parseInt(pas));
    }
 });
-const buscar = async()=>{
-    const api = 'https://api-teste-get.herokuapp.com/usuario';
-      var dados = await fetch(api);
-      var text = await dados.json();
-     //  console.log(nome);
-       if(text.hasOwnProperty('erro')){
-           alert('erro!')
-       }else{
-           gd(text);
-       }
-   }
-   const gd = (text)=>{
-console.log(text.Nome);
-console.log(text.Idade);
-}

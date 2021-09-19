@@ -5,13 +5,10 @@ function fazget(url){
     request.send();
     return request.responseText;
 }
-function criaLinha(usuario){
-console.log(usuario);
-}
 function main(){
    let dadosUsuario = fazget('https://api-teste-get.herokuapp.com/api/usuario')
-   JSON.parse(dadosUsuario);
-  console.log(dadosUsuario);
-  criaLinha(dadosUsuario);
+  let users = JSON.parse(dadosUsuario);
+  //console.log(users);
+  //auteticar('filho',0)
 }
 main();

@@ -13,7 +13,7 @@ function auteticar(us,pas){
         break;
       }else{
         if (i>=users.length-1) {
-          console.log('ERRO');
+          ///console.log('ERRO');
           alert('usuario ou senha incorretos');
           break;
         }

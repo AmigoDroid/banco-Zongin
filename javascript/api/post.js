@@ -1,32 +1,30 @@
 function fazerPost(url,body){
     var resq = new XMLHttpRequest();
     resq.open('POST',url,true);
-   
+    resq.setRequestHeader('Content-type','application/json')
     resq.send(JSON.stringify(body));
     resq.onload=function(){
         console.log(this.responseText);
     }
     return resq.responseText;
 }
-function cadastraruser(){
+function cadastraruser(nm,snm,cpft,us,sen){
     let url ='https://api-teste-get.herokuapp.com/adduser';
+	let tt='http://localhost:8877/adduser';
     let posite = positionumeber();
     let id = posite;
-    let nome = document.getElementById('nome').value;
-    let sobrenome = document.getElementById('sobrenome').value;
-    let cpf = document.getElementById('cpf').value;
     let usuario=document.getElementById('usuario').value;
     let senha=document.getElementById('senha').value
     let saldo=0;
 
-    body={
+   let body={
         'id':id,
-        'Nome':nome,
-        'SobreNome':sobrenome,
-        'Cpf':cpf,
+        'Nome':nm,
+        'SobreNome':snm,
+        'Cpf':cpft,
         'Saldo':saldo,
-        'usuario':usuario,
-        'senha':senha
+        'usuario':us,
+        'senha':sen
     }
     fazerPost(url,body);
    //console.log(body);

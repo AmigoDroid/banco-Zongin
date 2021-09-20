@@ -12,9 +12,9 @@ var user={
 var forme = document.getElementById('formulario');
 forme.addEventListener('submit',function(e){
     e.preventDefault();
-    cadastrar();
+    cadastrarbt();
 })
-function cadastrar(){
+function cadastrarbt(){
 let nm = document.getElementById('nome').value;
 let snm = document.getElementById('sobrenome').value;
 let cp = document.getElementById('cpf').value;
@@ -30,7 +30,7 @@ if(
         console.log('algum campo vazio!');
     }else{
         //cadastrar
-        cadastraruser();
+        cadastraruser(nm,snm,cp,us,sn);
     }
 
 }

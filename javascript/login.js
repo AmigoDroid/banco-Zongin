@@ -13,6 +13,6 @@ forme.addEventListener('submit',function(e){
    if(us===''||pas===''){
 
    }else{
-      auteticar(us,parseInt(pas));
+      auteticar(us,pas);
    }
 });

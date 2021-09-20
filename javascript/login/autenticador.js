@@ -6,11 +6,11 @@ function auteticar(us,pas){
     //verificar valor
     for(i=0;i<=users.length-1;i++){
       let username=users[i].usuario;
-      let password=''+users[i].senha;
+      let password=users[i].senha;
       console.log('user: '+username+' pass: '+password +' Id: '+i);
       console.log(pas);
       //
-      if(us===username && ""+pas===""+password){
+      if(us===username && pas===password){
       // console.log('Logado');
         logar(i);
         break;

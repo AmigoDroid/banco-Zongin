@@ -9,6 +9,6 @@ function cadastrar(){
 
 var sobre =document.getElementById('sobre');
 sobre.addEventListener('click',function(){
-    var msg ="Olá, os seus dados são armazenados na sua maquina (localStorage). Para ver os dados click com o botão direito do mause / inspecionar procure a opção (Application) se seu navegador for o google Chrome."
+    var msg ='olá, os dados de login estão sendo salvos em uma api,(use dados fake) pois esse projeto é so para estudo'
     alert(msg)
 });

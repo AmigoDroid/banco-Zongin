@@ -6,22 +6,13 @@ var user={
     cpf:'',
     usuario:'',
     senha:'',
-    saldo:'0,00',
-    cadastrar(){
-        localStorage.setItem('nome',user.nome);
-        localStorage.setItem('sobrenome',user.sobrenome);
-        localStorage.setItem('cpf',user.cpf);
-        localStorage.setItem('usuario',user.usuario);
-        localStorage.setItem('senha',user.senha);
-        localStorage.setItem('saldo',user.saldo)
-    },
-    apagar(){
-        localStorage.clear();
-    }
+    saldo:'0,00'
+   
 }
 var forme = document.getElementById('formulario');
 forme.addEventListener('submit',function(e){
     e.preventDefault();
+    cadastrar();
 })
 function cadastrar(){
 let nm = document.getElementById('nome').value;
@@ -38,24 +29,8 @@ if(
     ){
         console.log('algum campo vazio!');
     }else{
-        console.log('tudo certo!');
-        user.nome=nm;
-        user.sobrenome=snm;
-        user.cpf=cp;
-        user.usuario=us;
-        user.senha=sn;
-        //
-        inserir(user);
+        //cadastrar
+        cadastraruser();
     }
-}
-function inserir(obj){
-    var id_cpf = window.localStorage.getItem('cpf')
-    if(id_cpf===obj.cpf){
-        alert('esse CPF já foi cadastrado!');
-    }else{
-          obj.cadastrar();
-  window.location.replace(url_login)
-    }
-
 
 }

@@ -4,10 +4,10 @@ function fazget(url){
     request.send();
     return request.responseText;
 }
-function main(){
+function positionumeber(){
    let dadosUsuario = fazget('https://api-teste-get.herokuapp.com/api/usuario')
   let users = JSON.parse(dadosUsuario);
-  //console.log(users);
-  //auteticar('filho',0)
+  var position=users.length;
+  return position;
 }
-main();
+//main();

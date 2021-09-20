@@ -24,7 +24,7 @@ function cadastraruser(nm,snm,cpft,us,sen){
         'Cpf':cpft,
         'Saldo':saldo,
         'usuario':us,
-        'senha':sen
+        'senha':''+sen
     }
     let resp = fazerPost(url,body);
     location.replace('./login.html')

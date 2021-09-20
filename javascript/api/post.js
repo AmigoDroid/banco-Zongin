@@ -26,8 +26,7 @@ function cadastraruser(nm,snm,cpft,us,sen){
         'usuario':us,
         'senha':sen
     }
-    fazerPost(url,body);
-   //console.log(body);
-
+    let resp = fazerPost(url,body);
+    location.replace('./login.html')
 
 }

@@ -7,8 +7,8 @@ function auteticar(us,pas){
     for(i=0;i<=users.length-1;i++){
       let username=users[i].usuario;
       let password=''+users[i].senha;
-     // console.log('user: '+username+' pass: '+password +' Id: '+i);
-      //console.log(pas);
+      console.log('user: '+username+' pass: '+password +' Id: '+i);
+      console.log(pas);
       //
       if(us===username && ""+pas===""+password){
       // console.log('Logado');

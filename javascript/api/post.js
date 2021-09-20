@@ -18,7 +18,7 @@ function cadastraruser(nm,snm,cpft,us,sen){
     let saldo=0;
 
    let body={
-        'id':id,
+        'id':''+id,
         'Nome':nm,
         'SobreNome':snm,
         'Cpf':cpft,

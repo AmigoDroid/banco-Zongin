@@ -10,7 +10,7 @@ function auteticar(us,pas){
       //console.log('user: '+username+' pass: '+password +' Id: '+i);
       //
       if(us===username && pas===password){
-        console.log('Logado');
+      //  console.log('Logado');
         logar(i);
         break;
       }else{

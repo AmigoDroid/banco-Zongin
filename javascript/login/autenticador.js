@@ -1,7 +1,7 @@
 function auteticar(us,pas){
     //fazer get
     let dadosUsuario = fazget('https://api-teste-get.herokuapp.com/api/usuario')
-    let tt= fazget('http://localhost:8877/api/usuario');
+  //  let tt= fazget('http://localhost:8877/api/usuario');
     let users = JSON.parse(dadosUsuario);
     //verificar valor
     for(i=0;i<=users.length-1;i++){

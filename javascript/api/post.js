@@ -10,7 +10,7 @@ function fazerPost(url,body){
 }
 function cadastraruser(nm,snm,cpft,us,sen){
     let url ='https://api-teste-get.herokuapp.com/adduser';
-	let tt='http://localhost:8877/adduser';
+	//let tt='http://localhost:8877/adduser';
     let posite = positionumeber();
     let id = posite;
     let usuario=document.getElementById('usuario').value;

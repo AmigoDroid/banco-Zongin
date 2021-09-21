@@ -1,8 +1,7 @@
-'use strict'
- var url_home='home.html'
-var login ={
-    usuario:localStorage.getItem('usuario'),
-    senha:localStorage.getItem('senha')
+    var login ={
+    usuario:'',
+    senha:'',
+    logado:false
 }
 var forme = document.getElementById('formulario');
 forme.addEventListener('submit',function(e){
@@ -13,6 +12,6 @@ forme.addEventListener('submit',function(e){
    if(us===''||pas===''){
 
    }else{
-      auteticar(us,pas);
+      logar(us,pas);
    }
 });

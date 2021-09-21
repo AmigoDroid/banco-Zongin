@@ -4,7 +4,9 @@ function fazerPost(url,body){
     resq.setRequestHeader('Content-type','application/json')
     resq.send(JSON.stringify(body));
     resq.onload=function(){
-        console.log(this.responseText);
+       // console.log(this.responseText);
+        //mandar resposta
+        recebeResposta(this.responseText);
     }
     return resq.responseText;
 }
@@ -26,7 +28,7 @@ function cadastraruser(nm,snm,cpft,us,sen){
         'usuario':us,
         'senha':''+sen
     }
-    let resp = fazerPost(url,body);
+    fazerPost(url,body);
     location.replace('./login.html')
 
 }

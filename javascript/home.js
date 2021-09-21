@@ -38,7 +38,7 @@ window.onload=function(){
           if(logado===false){
             //não logado 
             alert('você presisa fazer o login')
-            location.replace('/login.html')
+            location.replace('/pages/login.html')
           }else{
             console.log('falha interna');
             location.replace('/pages/splash.html');

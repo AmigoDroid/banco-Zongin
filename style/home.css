@@ -55,3 +55,65 @@ body{
     outline: none;
     box-shadow: 0 0 3px;
 }
+#div-title-pix{
+    text-align: center;
+}
+#img-pix{
+    width: 150px;
+    height: 50px;
+    margin-top: 35px;
+    margin-bottom: -70px;
+    text-align: center;
+    border: 1px solid rgba(138, 134, 134, 0.39);
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+#tela-pix{
+text-align: center;
+margin-top: 40px;
+font-family: monospace;
+}
+#menu-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+}
+.card{ 
+    margin: 20px;
+    padding: 10px;
+    width: 80px;
+    font-size: 8px;
+    background-color: rgba(97, 238, 207, 0.37);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.507);
+    transition: all 0.5s ease-out;
+    
+}
+.card h1{
+    border-bottom: 1px solid;
+    
+}
+#pagar{
+    border-left: 4px solid red;
+    border: 1px solid;
+}
+#pagar img{
+    position: relative;
+}
+#receber{
+    border-left: 4px solid green;
+    border: 1px solid;
+}
+.card:hover{
+transform: translateY(-5px);
+cursor: pointer;
+}

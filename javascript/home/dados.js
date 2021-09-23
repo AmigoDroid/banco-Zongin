@@ -7,5 +7,4 @@
 
   text_saldo.innerText='Saldo: '+dinheiro
   text_nome.innerText=nome;
-  
 }

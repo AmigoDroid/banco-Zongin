@@ -57,9 +57,6 @@ function existe(body){
     let dados = JSON.parse(bodyy);
     console.log(dados);
     cpf.style.border=' 1px solid rgb(100, 200, 200)'
-    cpf.style.pointerEvents='none'
-   // cpf.style.backgroundColor='';
-
 }
 function notexiste(){
 console.log('cpf not exist');

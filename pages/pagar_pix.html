@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/pagar_pix.css">
+     <!--fontes-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     <script src="/javascript/pix/pagar.js" defer></script>
     <title>Pix</title>
 </head>
 <body>
     <div id="div-pix">
         <h1>Pagar por PIX</h1>
-        <form>
+        <form id="formulario">
 
              <div class="div-input">
                 <input type="number" name="cpf" id="id_cpf" required> 
-                <span></span>
+                <span id="span"></span>
                 <label>CPF</label>
             </div>
 
             <div class="div-input">
             <input type="number" name="valor" id="id_valor" required>
-            <span></span>
+            <span id="span"></span>
             <label>valor </label>
             </div>
 
-            <button>Pagar</button>
+            <button type="submit">Pagar</button>
            
         </form>
     </div>

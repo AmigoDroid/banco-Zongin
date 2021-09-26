@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: montserrat;
 }
 #div-pix{
     position: absolute;
@@ -28,7 +29,9 @@ position: relative;
 .div-input input{
 width: 100%;
 height: 30px;
-margin-top: 15px;
+padding-left: 5px;
+margin-top: 25px;
+margin-right: 10px;
 border: none;
 outline: none;
 position: relative;
@@ -38,14 +41,15 @@ border-bottom: 1px solid;
     position: absolute;
     padding-left: 5px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(6%);
     pointer-events: none;
     transition: .2s;
     font-size: 19px;
+    font-weight: 600;
 }
 .div-input input:focus~label,
 .div-input input:valid~label{ 
-    font-size: 15px;
+    font-size: 12px;
      transform: translateY(-25px);
  }
  .div-input span::before{
@@ -57,11 +61,18 @@ border-bottom: 1px solid;
     width: 0%;
     transition: .5s;
 }
-.div-input input:focus~span::before,
-.div-input input:valid~span::before{
-    width: 101%;
+.div-input input:focus~span::before{
+    width: 103%;
 }
 form  button{
     width: 100%;
+    padding: 10px;
+    background-color: aquamarine;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.459);
     margin-top: 10px;
 }

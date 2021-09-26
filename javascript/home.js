@@ -45,7 +45,6 @@ window.onload=function(){
           }
         }
       }
-      // function aleatorio(max){
-      //   var n = Math.floor(Math.random() * 100 + 1)
-      //   console.log(n);
-      // }
+      function pagar(){
+        location.assign('/pages/pagar_pix.html')
+      }

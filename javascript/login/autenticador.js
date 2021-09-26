@@ -33,7 +33,7 @@
 //   }
 
   function logar(user,pass){
-    let url ='https://api-teste-get.herokuapp.com/logar/user'
+    let url ='https://api-teste-get.herokuapp.com/login'
     
     
     let body ={

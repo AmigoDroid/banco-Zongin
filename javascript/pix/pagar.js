@@ -21,7 +21,7 @@ function verificar(body){
 
 
 //buscar o cpf no servidor
-function fazgetcpf(url,body){
+function fazpostcpf(url,body){
     var get = new XMLHttpRequest();
     get.open('POST',url,true);
     get.setRequestHeader('Content-type','application/json');

@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#div-pix{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    padding: 25px;
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+.div-pix form{
+padding: 15px;
+position: relative;
+
+
+}
+.div-input{
+    position: relative;
+   
+}
+#div-pix h1{
+    text-align: center;
+}
+.div-input input{
+width: 100%;
+height: 30px;
+margin-top: 15px;
+border: none;
+outline: none;
+position: relative;
+border-bottom: 1px solid;
+}
+.div-input label{
+    position: absolute;
+    padding-left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .2s;
+    font-size: 19px;
+}
+.div-input input:focus~label,
+.div-input input:valid~label{ 
+    font-size: 15px;
+     transform: translateY(-25px);
+ }
+ .div-input span::before{
+    content: '';
+    height: 2px;
+    position: absolute;
+    background: rgb(48, 177, 252);
+    transform: translateY(-2px);
+    width: 0%;
+    transition: .5s;
+}
+.div-input input:focus~span::before,
+.div-input input:valid~span::before{
+    width: 101%;
+}
+form  button{
+    width: 100%;
+    margin-top: 10px;
+}

@@ -49,7 +49,7 @@ window.onload=function(){
         location.assign('/pages/pagar_pix.html')
       }
 
-      
+
       function pix(){
         let body ={
           usuario:localStorage.getItem('usuario'),
@@ -57,7 +57,7 @@ window.onload=function(){
           cpf:localStorage.getItem('cpf')
         }
        
-        alert('minha chave PIX é: '+body.cpf +' user ela para receber pagamentos');
+        alert('minha chave PIX é: '+body.cpf +' use ela para receber pagamentos');
       }
       
     //   function getcpf(url){

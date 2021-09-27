@@ -54,7 +54,6 @@ function pagar(body){
   }else{
       //não pagar
   }
-  console.log(st);
 }
 
 

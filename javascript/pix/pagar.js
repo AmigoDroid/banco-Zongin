@@ -3,12 +3,17 @@ let valor = document.getElementById('id_valor');
 let cpf = document.getElementById('id_cpf');
 let span = document.getElementById('span');
 let vercpf=0;
+var PGvalor =0;
+
+
 cpf.onblur=function(){
   post_cpf(cpf.value,vercpf);
 }
-cpf.style.border=' 1px solid silver'
 
+cpf.style.border=' 1px solid silver'
 valor.style.border=' 1px solid silver'
+
+
 form.addEventListener('submit',function(e){
   e.preventDefault();
 
@@ -16,14 +21,15 @@ let cpf = document.getElementById('id_cpf').value;
 let valor = document.getElementById('id_valor').value;
 
 if(cpf===''|| valor===''){
+
     alert('preencha os campos corretamente');
-}else{
+}
+else
+{
     //pagar o cara
    processar(cpf,valor);
-  
    
 }});
-var PGvalor =0;
 
 function processar(cpf,valor){
     let val = parseFloat(valor);
@@ -34,13 +40,11 @@ function processar(cpf,valor){
         //realizar pagamento de fato
         post_cpf(cpf,pagar);
         PGvalor=valor;
-       // window.postMessage('oi')
     }
    
 
 }
 function pagar(body){
-    //vamos pagar
    let bod = JSON.parse(body);
    let name = bod.Nome;
    let lastname = bod.SobreNome;
@@ -52,17 +56,22 @@ function pagar(body){
   }
   console.log(st);
 }
+
+
+
 function existe(body){
     let bodyy = body;
     let dados = JSON.parse(bodyy);
     console.log(dados);
     cpf.style.border=' 1px solid rgb(100, 200, 200)'
 }
+
+
+
 function notexiste(){
 console.log('cpf not exist');
 cpf.style.border='1px solid rgb(252, 23, 23)';
 }
-
 
 
 
@@ -91,7 +100,5 @@ function post_cpf(cpf,id){
             pagar(this.responseText);
         }else{
             notexiste();
-        }}
-}
-}
+        }}}}
 

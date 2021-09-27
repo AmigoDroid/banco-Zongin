@@ -1,5 +1,4 @@
 
-var url_login='login.html'
 var user={
     nome:'',
     sobrenome:'',
@@ -9,11 +8,16 @@ var user={
     saldo:'0,00'
    
 }
+
 var forme = document.getElementById('formulario');
+
+
 forme.addEventListener('submit',function(e){
     e.preventDefault();
     cadastrarbt();
 })
+
+
 function cadastrarbt(){
 let nm = document.getElementById('nome').value;
 let snm = document.getElementById('sobrenome').value;

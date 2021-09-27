@@ -1,21 +1,28 @@
-window.onload=function(){
-   if(login.logado==='true'){
-       logar(login.usuario,login.senha);
-   }else{
-    alert('você presisa fazer o login')
-     location.replace('/pages/login.html')
-   }
+const login ={
+  logado: localStorage.getItem('logado'),
+  usuario: localStorage.getItem('usuario'),
+  senha: localStorage.getItem('senha')
+}
+const dados={
+   nome:'',
+   saldo:0
 }
 
-    const login ={
-       logado: localStorage.getItem('logado'),
-       usuario: localStorage.getItem('usuario'),
-       senha: localStorage.getItem('senha')
+
+    window.onload=function(){
+      logado();
     }
-    const dados={
-        nome:'',
-        saldo:0
+
+    function logado(){
+      if(login.logado==='true'){
+        logar(login.usuario,login.senha);
+    }else{
+     alert('você presisa fazer o login')
+      location.replace('/pages/login.html')
     }
+    }
+
+
     function logar(user,pass){
         let url ='https://api-teste-get.herokuapp.com/login'
         let body ={
@@ -24,34 +31,43 @@ window.onload=function(){
         }
        let res= fazerPost(url,body);
       }
-      function recebeResposta(body){
-        let resposta = JSON.parse(body);
-        logado = resposta.logado;
-        if(logado===true){
 
+
+
+      function recebeResposta(body){
+
+        let resposta = JSON.parse(body);
+        
+        logado = resposta.logado;
+
+        if(logado===true){
           let nomeapi = resposta.nome;
           let saldoapi = resposta.saldo;  
-
           mostrardados(nomeapi,saldoapi);
-
-        }else{
+        }
+        else
+        {
           if(logado===false){
             //não logado 
             alert('você presisa fazer o login')
             location.replace('/pages/login.html')
-          }else{
-            console.log('falha interna');
+          }
+          else
+          {
             location.replace('/pages/splash.html');
           }
         }
       }
+
+
+
       function pagar(){
         location.assign('/pages/pagar_pix.html')
       }
 
 
       function pix(){
-        let body ={
+        let body = {
           usuario:localStorage.getItem('usuario'),
           senha:localStorage.getItem('senha'),
           cpf:localStorage.getItem('cpf')
@@ -59,10 +75,4 @@ window.onload=function(){
        
         alert('minha chave PIX é: '+body.cpf +' use ela para receber pagamentos');
       }
-      
-    //   function getcpf(url){
-    //     let request = new XMLHttpRequest();
-    //     request.open('GET',url,false);
-    //     request.send();
-    //     return request.responseText;
-    // }
+    

@@ -44,21 +44,23 @@
 
     login.usuario=user;
     login.senha=pass;
-   let res= fazerPost(url,body);
-
+   fazerPost(url,body);
+   //login.cpf= dados.cpf;
    
   }
   function recebeResposta(body){
     let resposta = JSON.parse(body);
+    console.log(resposta);
     logado = resposta.logado;
     if(logado===true){
       let nome = resposta.nome;
       let saldo = resposta.saldo;
-
+      let cpf = resposta.cpf;
       //salvvar login
       localStorage.setItem('logado',true);
       localStorage.setItem('usuario',login.usuario);
       localStorage.setItem('senha',login.senha);
+      localStorage.setItem('cpf',cpf);
 
       
      //fazer o login de fato

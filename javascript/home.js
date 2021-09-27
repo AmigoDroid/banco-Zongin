@@ -48,3 +48,21 @@ window.onload=function(){
       function pagar(){
         location.assign('/pages/pagar_pix.html')
       }
+
+      
+      function pix(){
+        let body ={
+          usuario:localStorage.getItem('usuario'),
+          senha:localStorage.getItem('senha'),
+          cpf:localStorage.getItem('cpf')
+        }
+       
+        alert('minha chave PIX é: '+body.cpf +' user ela para receber pagamentos');
+      }
+      
+    //   function getcpf(url){
+    //     let request = new XMLHttpRequest();
+    //     request.open('GET',url,false);
+    //     request.send();
+    //     return request.responseText;
+    // }

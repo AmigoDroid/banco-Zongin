@@ -1,7 +1,8 @@
     var login ={
     usuario:'',
     senha:'',
-    logado:false
+    logado:false,
+    cpf:''
 }
 var forme = document.getElementById('formulario');
 forme.addEventListener('submit',function(e){

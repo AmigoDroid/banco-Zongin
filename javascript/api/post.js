@@ -44,6 +44,7 @@ function Fazerlogin(body){
 
 function recebeResposta(res){
 const resp = JSON.parse(res);
+console.log(resp);
 if(resp.resposta==true){
     alert('cadastrado');
     location.replace('./login.html');

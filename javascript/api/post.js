@@ -32,6 +32,7 @@ function cadastraruser(nm,snm,cpft,us,sen){
     location.replace('./login.html')
 
 }
+
 function recebeResposta(res){
 const resp = JSON.parse(res);
 if(resp.resposta==true){

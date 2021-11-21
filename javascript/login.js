@@ -13,6 +13,12 @@ forme.addEventListener('submit',function(e){
    if(us===''||pas===''){
 
    }else{
-      logar(us,pas);
+       
+     const body={
+         usuario:us,
+         senha:pas
+     }
+    Fazerlogin(body);
+    console.log(body);
    }
 });

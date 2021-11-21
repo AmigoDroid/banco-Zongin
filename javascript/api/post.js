@@ -24,16 +24,38 @@ function cadastraruser(nm,snm,cpft,us,sen){
         'usuario':us,
         'senha':''+sen
     }
-    fazerPost(url,body);
-    location.replace('./login.html')
 
+    fazerPost(url,body);
+   
+
+}
+function Fazerlogin(body){
+    let url ='https://api-teste-get.herokuapp.com/login';
+    const api = new XMLHttpRequest();
+    api.open('POST',url,true);
+    api.setRequestHeader('Content-type','application/json');
+    api.send(JSON.stringify(body));
+    console.log('fazendo requisição');
+    api.onload=function(){
+        console.log('resposta do servidor: '+this.responseText);
+        respostaLogin(this.responseText);
+    }
 }
 
 function recebeResposta(res){
 const resp = JSON.parse(res);
 if(resp.resposta==true){
     alert('cadastrado');
+    location.replace('./login.html');
 }else{
     alert('erro');
 }
+}
+function respostaLogin(status){
+    const dados = JSON.parse(status);
+    if(dados.resposta==true){
+        alert('logado/'+' Codigo:'+dados.code);
+    }else{
+        alert('erro desconheido: '+dados.resposta+' Codigo:'+dados.code);
+    }
 }

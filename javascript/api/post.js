@@ -11,16 +11,12 @@ function fazerPost(url,body){
     return resq.responseText;
 }
 function cadastraruser(nm,snm,cpft,us,sen){
-    let url ='https://api-teste-get.herokuapp.com/adduser';
-	//let tt='http://localhost:8877/adduser';
-    let posite = positionumeber();
-    let id = posite;
+    const url ='https://api-teste-get.herokuapp.com/adduser';
     let usuario=document.getElementById('usuario').value;
-    let senha=document.getElementById('senha').value
+    let senha=document.getElementById('senha').value;
     let saldo=0;
 
-   let body={
-        'id':''+id,
+   const body={
         'Nome':nm,
         'SobreNome':snm,
         'Cpf':cpft,

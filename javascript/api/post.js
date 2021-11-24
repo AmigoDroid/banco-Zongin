@@ -17,12 +17,12 @@ function cadastraruser(nm,snm,cpft,us,sen){
     let saldo=0;
 
    const body={
-        'Nome':nm,
-        'SobreNome':snm,
-        'Cpf':cpft,
-        'Saldo':saldo,
-        'usuario':us,
-        'senha':''+sen
+        nome:nm,
+        sobrenome:snm,
+        cpf:cpft,
+        saldo:saldo,
+        usuario:''+us,
+        senha:''+sen
     }
 
     fazerPost(url,body);

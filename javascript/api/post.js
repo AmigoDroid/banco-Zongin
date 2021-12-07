@@ -4,28 +4,29 @@ function fazerPost(url,body){
     resq.setRequestHeader('Content-type','application/json')
     resq.send(JSON.stringify(body));
     resq.onload=function(){
-       // console.log(this.responseText);
         //mandar resposta
         recebeResposta(this.responseText);
     }
     return resq.responseText;
 }
+
+
 function cadastraruser(nm,snm,cpft,us,sen){
     const url ='https://api-teste-get.herokuapp.com/adduser';
-    let usuario=document.getElementById('usuario').value;
-    let senha=document.getElementById('senha').value;
     let saldo=0;
+    let cpff = Number.parseInt(cpft);
 
    const body={
         nome:nm,
         sobrenome:snm,
-        cpf:cpft,
+        cpf:cpff,
         saldo:saldo,
         usuario:''+us,
         senha:''+sen
     }
 
     fazerPost(url,body);
+    console.table(body);
    
 
 }
@@ -55,7 +56,7 @@ if(resp.resposta==true){
 function respostaLogin(status){
     const dados = JSON.parse(status);
     if(dados.resposta==true){
-        alert('logado/'+' Codigo:'+dados.code);
+        location.assign('./home');
     }else{
         alert('erro desconheido: '+dados.resposta+' Codigo:'+dados.code);
     }

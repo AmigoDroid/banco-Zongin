@@ -1,0 +1,46 @@
+:root{
+    --cor-do-cartao:rgb(42, 136, 165);
+    --cor-do-chip:bisque;
+    --fonte-do-z:montserrat;
+    --fonte-do-nome:sans-serif;
+    --cor-especial-do-cartao:radial-gradient(rgb(42, 136, 165),rgb(14, 218, 173));
+}
+#cartao{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background:var(--cor-do-cartao);
+    position: relative;
+    transform: rotate(180deg);
+}
+#cartao #logo h1{
+    text-align: center;
+    margin-top: 50%;
+    margin: 0 auto;
+    font-family: var(--fonte-do-z);
+    font-size: 200px;
+    transform: rotate(180deg);
+}
+#cartao #chip-div #chip{
+    width: 35px;
+    height: 40px;
+    background-color: var(--cor-do-chip);
+    position: absolute;
+    bottom: 30px;
+    left: 35%;
+    border-radius: 5px;
+}
+#cartao #chip-div #nfc{
+    width: 30px;
+    position: absolute;
+    right: 55px;
+    bottom: 33px;
+}
+#cartao #nome h3{
+    position:absolute;
+    transform: rotate(270deg);
+    font-size: 15px;
+    left: -60px;
+    bottom: 140px;
+    font-family: var(--fonte-do-nome);
+}

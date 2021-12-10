@@ -10,7 +10,7 @@ const dados={
 
 
     window.onload=function(){
-      logado();
+      //logado();
     }
 
     function logado(){

@@ -34,7 +34,7 @@ if(
         console.log('algum campo vazio!');
     }else{
         //cadastrar
-        cadastraruser(nm,snm,cp,us,sn);
+        cadastraruser(nm,snm,''+cp,us,sn);
     }
 
 }

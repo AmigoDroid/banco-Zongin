@@ -19,8 +19,8 @@ function cadastraruser(nm,snm,cpft,us,sen){
    const body={
         nome:nm,
         sobrenome:snm,
-        cpf:cpff,
-        saldo:saldo,
+        cpf:''+cpff,
+        saldo:''+saldo,
         usuario:''+us,
         senha:''+sen
     }
